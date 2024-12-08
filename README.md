@@ -55,16 +55,3 @@ The model achieves:
 
 ---
 
-## Prediction
-
-Use the following script to predict images:
-
-```python
-import numpy as np
-from tensorflow.keras.preprocessing import image
-
-def predict_image(img_path, model):
-    img = image.load_img(img_path, target_size=(150, 150))
-    img_array = image.img_to_array(img)
-    img_array = np.expand_dims(img_array, axis=0)
-   
